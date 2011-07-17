@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="GVCBluetoothApp"
+    />
+
+<Button
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentBottom="true"
+   android:text="1"
+   android:onClick="sendSignal"/>
+<Button
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentBottom="true"
+   android:text="2"
+   android:onClick="sendSignal"/>
+<Button
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentBottom="true"
+   android:text="3"
+   android:onClick="sendSignal"/>
+<Button
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentBottom="true"
+   android:text="4"
+   android:onClick="sendSignal"/>
+<Button
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentBottom="true"
+   android:text="5"
+   android:onClick="sendSignal"/>
+<Button
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentBottom="true"
+   android:text="6"
+   android:onClick="sendSignal"/>
+<Button
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentBottom="true"
+   android:text="7"
+   android:onClick="sendSignal"/>
+<Button
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_alignParentBottom="true"
+   android:text="8"
+   android:onClick="sendSignal"/>
+
+
+</LinearLayout>
+
