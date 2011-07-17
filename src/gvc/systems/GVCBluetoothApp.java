@@ -11,32 +11,36 @@ import java.util.*;
 
 public class GVCBluetoothApp extends Activity
 {
-    BluetoothSocket gSocket;
-    BluetoothAdapter gAdapter;
-    BluetoothDevice gDevice;
-    OutputStream out;
+    private BluetoothSocket gSocket;
+    private BluetoothAdapter gAdapter;
+    private BluetoothDevice gDevice;
+    private OutputStream out;
     
-    
+    private int flag;
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-
 	gAdapter = BluetoothAdapter.getDefaultAdapter();
 	gDevice = gAdapter.getRemoteDevice("00:06:66:04:A6:84");
-
-	try{
-	gSocket = gDevice.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
-	Thread.sleep(100);
-	gSocket.connect();
-	Thread.sleep(100);
-	out = gSocket.getOutputStream();
-	}
-	catch(InterruptedException e) {
-	}
-	catch(IOException e) {
-	}
-
+	flag =0;
+	//ConnectThread t = new ConnectThread;
+  try{
+		gSocket = gDevice.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
+		Thread.sleep(100);
+		gSocket.connect();
+		Thread.sleep(100);
+		out = gSocket.getOutputStream();
+		flag = 1;
+	    }
+	    catch(InterruptedException e) {
+		flag =-1;
+	    }
+	    catch(IOException e) {
+		flag =-1;
+	    }
+	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 	
@@ -46,7 +50,6 @@ public class GVCBluetoothApp extends Activity
 	super.onStart();
     }
     
-
 
     public void sendSignal(View v){
 	Button whichButton = (Button)v;
@@ -96,29 +99,28 @@ public class GVCBluetoothApp extends Activity
 	    }
 	    if(whichButton.getText().toString().equals("7")) {
 		//whichButton.setText("clicked");
-		out.write(54);	   
+		out.write(55);	   
 		Thread.sleep(10);
 		out.flush();
 		Thread.sleep(10);
 	    }
 	    if(whichButton.getText().toString().equals("8")) {
 		//whichButton.setText("clicked");
-		out.write(55);	   
+		out.write(56);	   
 		Thread.sleep(10);
 		out.flush();
 		Thread.sleep(10);
 	    }
-
 	}
 	catch(IOException e) {
 	}
 	catch(InterruptedException e) {
 	}
-    }
-    
-    private class Something extends Thread{
+    }    
+    private class ConnectThread extends Thread{
 	public void run(){
+	  
+
 	}
-    }
-    
+    }    
 }

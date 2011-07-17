@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/scroller" 
+   android:layout_width="fill_parent" 
+   android:layout_height="fill_parent"
+   android:fillViewport="true"
+   >
+<LinearLayout 
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -58,7 +64,5 @@
    android:layout_alignParentBottom="true"
    android:text="8"
    android:onClick="sendSignal"/>
-
-
 </LinearLayout>
-
+</ScrollView>
