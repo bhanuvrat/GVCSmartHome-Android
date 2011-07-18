@@ -117,8 +117,12 @@ public class GVCBluetoothApp extends Activity
 	}
     }    
     private class ConnectThread extends Thread{
+    
+    
+    //a better way of creating threads
 	public void run(){
 	  
 	}
     }
+    
 }
