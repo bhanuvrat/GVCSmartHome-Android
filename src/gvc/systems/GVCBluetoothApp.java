@@ -25,21 +25,7 @@ public class GVCBluetoothApp extends Activity
 	gAdapter = BluetoothAdapter.getDefaultAdapter();
 	gDevice = gAdapter.getRemoteDevice("00:06:66:04:A6:84");
 	flag =0;
-	//ConnectThread t = new ConnectThread;
-  try{
-		gSocket = gDevice.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
-		Thread.sleep(100);
-		gSocket.connect();
-		Thread.sleep(100);
-		out = gSocket.getOutputStream();
-		flag = 1;
-	    }
-	    catch(InterruptedException e) {
-		flag =-1;
-	    }
-	    catch(IOException e) {
-		flag =-1;
-	    }
+	ConnectThread t = new ConnectThread();
 	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
@@ -119,8 +105,20 @@ public class GVCBluetoothApp extends Activity
     }    
     private class ConnectThread extends Thread{
 	public void run(){
-	  
-
+	    try{
+		gSocket = gDevice.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
+		Thread.sleep(100);
+		gSocket.connect();
+		Thread.sleep(100);
+		out = gSocket.getOutputStream();
+		flag = 1;
+	    }
+	    catch(InterruptedException e) {
+		flag =-1;
+	    }
+	    catch(IOException e) {
+		flag =-1;
+	    }
 	}
-    }    
+    }
 }
