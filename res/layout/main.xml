@@ -15,63 +15,22 @@
     android:layout_height="wrap_content" 
     android:text="GVCBluetoothApp"
     />
-
-<Button
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:layout_alignParentBottom="true"
-   android:text="1"
-   android:onClick="sendSignal"
-   android:background="@drawable/blue"
-   style="@style/ButtonText"/>
-<Button
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:layout_alignParentBottom="true"
-   android:text="2"
-   android:onClick="sendSignal"
-   android:background="@drawable/red"
-   style="@style/ButtonText"/>
-<Button
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:layout_alignParentBottom="true"
-   android:text="3"
-   android:onClick="sendSignal"
-   android:background="@drawable/purple"
-   style="@style/ButtonText"/>
-<Button
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:layout_alignParentBottom="true"
-   android:text="4"
-   android:onClick="sendSignal"
-   android:background="@drawable/green"
-   style="@style/ButtonText"/>
-<Button android:layout_width="fill_parent" android:text="5" android:onClick="sendSignal" android:background="@drawable/yellow" style="@style/ButtonText" android:layout_height="wrap_content"></Button>
-<Button
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:layout_alignParentBottom="true"
-   android:text="6"
-   android:onClick="sendSignal"
-   android:background="@drawable/colora"
-   style="@style/ButtonText"/>
-<Button
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:layout_alignParentBottom="true"
-   android:text="7"
-   android:onClick="sendSignal"
-   android:background="@drawable/colorb"
-   style="@style/ButtonText"/>
-<Button
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:layout_alignParentBottom="true"
-   android:text="8"
-   android:onClick="sendSignal"
-   android:background="@drawable/colorc"
-   style="@style/ButtonText"/>
+<TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="                 " android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+<TableLayout android:id="@+id/tableLayout1" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="0.21">
+    <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@+id/button1" android:layout_height="wrap_content" android:layout_width="160dp" android:drawableBottom="@drawable/img1" android:clickable="true" android:onClick="sendSignal" android:drawablePadding="10dp"></Button>
+        <Button android:id="@+id/button2" android:layout_height="wrap_content" android:layout_width="160dp" android:drawableBottom="@drawable/img2" android:clickable="true" android:onClick="sendSignal" android:drawablePadding="10dp"></Button>
+ </TableRow>
+       
+    <TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@+id/button3" android:layout_width="160dp" android:layout_height="wrap_content" android:drawableBottom="@drawable/img3" android:clickable="true" android:onClick="sendSignal" android:drawablePadding="10dp"></Button>
+        <Button android:id="@+id/button4" android:layout_width="160dp" android:layout_height="wrap_content" android:drawableBottom="@drawable/img4" android:clickable="true" android:onClick="sendSignal" android:drawablePadding="10dp"></Button>
+    </TableRow>
+    <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@+id/button5" android:layout_width="160dp" android:layout_height="wrap_content" android:drawableBottom="@drawable/img5" android:clickable="true" android:onClick="sendSignal" android:drawablePadding="10dp"></Button>
+        <Button android:id="@+id/button6" android:layout_width="160dp" android:layout_height="wrap_content" android:drawableBottom="@drawable/img6" android:clickable="true" android:onClick="sendSignal" android:drawablePadding="10dp"></Button>
+    </TableRow>
+  
+</TableLayout>
 </LinearLayout>
 </ScrollView>

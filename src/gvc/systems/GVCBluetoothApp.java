@@ -54,62 +54,46 @@ public class GVCBluetoothApp extends Activity
 	Button whichButton = (Button)v;
 	
 	try{
-	    if(whichButton.getText().toString().equals("1")) {
-		//whichButton.setText("clicked");
-		out.write(49);	   
-		Thread.sleep(10);
-		out.flush();
-		Thread.sleep(10);
-	    }
-	    if(whichButton.getText().toString().equals("2")) {
-		//whichButton.setText("clicked");
-		out.write(50);	   
-		Thread.sleep(10);
-		out.flush();
-		Thread.sleep(10);
-	    }
-	    if(whichButton.getText().toString().equals("3")) {
-		//whichButton.setText("clicked");
-		out.write(51);	   
-		Thread.sleep(10);
-		out.flush();
-		Thread.sleep(10);
-	    }
-	    if(whichButton.getText().toString().equals("4")) {
-		//whichButton.setText("clicked");
-		out.write(52);	   
-		Thread.sleep(10);
-		out.flush();
-		Thread.sleep(10);
-	    }
-	    if(whichButton.getText().toString().equals("5")) {
-		//whichButton.setText("clicked");
-		out.write(53);	   
-		Thread.sleep(10);
-		out.flush();
-		Thread.sleep(10);
-	    }
-	    if(whichButton.getText().toString().equals("6")) {
-		//whichButton.setText("clicked");
-		out.write(54);	   
-		Thread.sleep(10);
-		out.flush();
-		Thread.sleep(10);
-	    }
-	    if(whichButton.getText().toString().equals("7")) {
-		//whichButton.setText("clicked");
-		out.write(55);	   
-		Thread.sleep(10);
-		out.flush();
-		Thread.sleep(10);
-	    }
-	    if(whichButton.getText().toString().equals("8")) {
-		//whichButton.setText("clicked");
-		out.write(56);	   
-		Thread.sleep(10);
-		out.flush();
-		Thread.sleep(10);
-	    }
+	    switch(v.getId())
+	    {
+  		case R.id.button1:
+   			out.write(49);	   
+			Thread.sleep(10);
+			out.flush();
+			Thread.sleep(10);
+   			break;
+  		case R.id.button2:
+   			out.write(50);	   
+			Thread.sleep(10);
+			out.flush();
+			Thread.sleep(10);
+   			break;
+  	
+  		case R.id.button3:
+   			out.write(51);	   
+			Thread.sleep(10);
+			out.flush();
+			Thread.sleep(10);
+   			break;
+  		case R.id.button4:
+   			out.write(52);	   
+			Thread.sleep(10);
+			out.flush();
+			Thread.sleep(10);
+   			break;
+  		case R.id.button5:
+   			out.write(53);	   
+			Thread.sleep(10);
+			out.flush();
+			Thread.sleep(10);
+   			break;
+  		case R.id.button6:
+   			out.write(54);	   
+			Thread.sleep(10);
+			out.flush();
+			Thread.sleep(10);
+   			break;
+       	    }
 	}
 	catch(IOException e) {
 	}
